@@ -1,19 +1,15 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import LocationButton from './LocationButton';
+import { Geolocation } from '@capacitor/geolocation';
 
 const App: React.FC = () => {
-  const handleLocationButtonClick = () => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        alert(`Latitude: ${latitude}\nLongitude: ${longitude}`);
-      },
-      (error) => {
-        alert(`Error retrieving location: ${error.message}`);
-      }
-    );
+  const handleLocationButtonClick = async () => {
+    const coordinates = await Geolocation.getCurrentPosition();
+
+    const latitude = coordinates.coords.latitude;
+    const longitude = coordinates.coords.longitude;
+    alert(`Latitude: ${latitude}\nLongitude: ${longitude}`);
   };
 
   return (

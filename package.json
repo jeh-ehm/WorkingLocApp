@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "5.0.4",
+    "@capacitor/app": "5.0.2",
+    "@capacitor/core": "5.0.4",
+    "@capacitor/geolocation": "^5.0.2",
+    "@capacitor/haptics": "5.0.2",
+    "@capacitor/keyboard": "5.0.2",
+    "@capacitor/status-bar": "5.0.2",
     "@ionic/react": "^7.0.9",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -40,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "5.0.4"
   }
 }
